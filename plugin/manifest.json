@@ -1,0 +1,28 @@
+{
+	"manifest_version": 3,
+	"name": "yt-mpv",
+	"version": "1.0",
+	"permissions": ["tabs", "commands", "activeTab", "scripting", "storage"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [{
+		"matches": ["*://www.youtube.com/watch*"],
+		"js": ["content.js"]
+	}],
+	"options_ui": {
+		"page": "options.html",
+		"open_in_tab": true
+	},
+	"commands": {
+		"play-pause": {
+			"suggested_key": {
+				"default": "MediaPlayPause"
+			},
+			"description": "Play or pause video"
+		}
+	},
+	"action": {
+		"default_title": "yt-mpv"
+	}
+}

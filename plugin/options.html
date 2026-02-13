@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>yt-mpv settings</title>
+	<style>
+		body { font-family: Arial, sans-serif; padding: 20px; }
+		label { display: block; margin: 10px 0 5px; }
+		#status { margin-top: 10px; }
+	</style>
+</head>
+<body>
+	<h1>yt-mpv settings</h1>
+
+	<label>
+		Port:
+		<input type="number" id="port" />
+	</label>
+
+	<label>
+		Playback in Browser:
+		<input type="checkbox" id="browserPlayback" />
+	</label>
+
+	<button id="save">Save</button>
+
+	<div id="status"></div>
+
+	<script src="options.js"></script>
+</body>
+</html>
